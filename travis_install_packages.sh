@@ -15,7 +15,7 @@ if [ "$TRAVIS_OS_NAME" = linux -o -z "$TRAVIS_OS_NAME" ]; then
     sudo apt-get install -q --fix-missing libpulse-dev cmake libssl-dev libsodium-dev
 
     if [ "$CC" = clang ]; then
-        sudo apt-get install -q --fix-missing clang-3.5
+        sudo apt-get install -q --fix-missing clang-3.6
     fi
 
     if [ "$CC" = gcc ]; then
