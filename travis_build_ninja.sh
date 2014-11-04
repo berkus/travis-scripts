@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 
-git clone git://github.com/martine/ninja.git
+set -x
+
+git clone git://github.com/martine/ninja.git || exit 1
 cd ninja
 git checkout release
 ./bootstrap.py || exit 1
