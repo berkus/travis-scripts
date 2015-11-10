@@ -3,11 +3,11 @@
 # Based on brew recipe.
 set -x
 set -e
-BOOST_VER=1.59.0
+BOOST_VER=1_59_0
 
 if [ ! -d "$HOME/boost/lib64" ]; then
     # us-east mirrors for travis: hivelocity, colocrossing
-    wget -O boost_$BOOST_VER.tar.bz2 http://sourceforge.net/projects/boost/files/boost/$BOOST_VER/boost_${BOOST_VER//./_}.tar.bz2/download?use_mirror=colocrossing
+    wget -O boost_$BOOST_VER.tar.bz2 http://sourceforge.net/projects/boost/files/boost/${BOOST_VER//_/.}/boost_$BOOST_VER.tar.bz2/download?use_mirror=colocrossing
     tar xjf boost_$BOOST_VER.tar.bz2
     cd boost_$BOOST_VER
     # FIXME: this is only linux and only clang, need more flexible setup (osx, gcc, 32 bit?)
