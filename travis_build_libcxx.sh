@@ -12,5 +12,5 @@ if [ "$CC" = clang ]; then
     # LIBCXX_LIBSUPCXX_INCLUDE_PATHS will break with libstdc++/gcc upgrade.
     cmake -G "Ninja" -DLIBCXX_CXX_ABI=libstdc++ -DLIBCXX_LIBSUPCXX_INCLUDE_PATHS="/usr/include/c++/4.6;/usr/include/c++/4.6/x86_64-linux-gnu/" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr .. || exit 1
     ninja || exit 1
-    sudo ninja install || exit 1
+    ninja install || exit 1
 fi
