@@ -2,7 +2,7 @@
 # Build a 64-bit c++11 libc++ based boost libraries we need for linux.
 # Based on brew recipe.
 set -x
-set -e
+
 BOOST_VER=1_59_0
 
 if [ ! -d "$HOME/boost/lib64" ]; then
